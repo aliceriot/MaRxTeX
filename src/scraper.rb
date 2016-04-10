@@ -1,12 +1,13 @@
 require 'mechanize'
 
 class Scraper
-  attr_reader :body
+  attr_reader :body, :page
 
   def initialize(url)
     @url = url
     @agent = Mechanize.new
-    @body = @agent.get(@url).search('body')
+    @page = @agent.get(@url)
+    @body = @page.search('body')
     check_for_blockquote
     delete_useless_children_from_body
   end
