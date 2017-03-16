@@ -1,4 +1,4 @@
-#MaRxTeX
+# MaRxTeX
 
 It's some Marxist texts, in LaTeX!
 
